@@ -151,5 +151,21 @@ namespace WorkingWithText
             }
             Console.WriteLine("Total vowel: " + count);
         }
+
+        public static void Exercise6()
+        {
+            Console.WriteLine("What's your name?");
+            var input = Console.ReadLine();
+            if(string.IsNullOrWhiteSpace(input))
+                return;
+            var length = input.Length;
+            var array = new char[length];
+            for (int i = input.Length; i > 0; i--)
+            {
+                array[length - i] = input[i - 1];
+            }
+            var name = new string(array);
+            Console.WriteLine(name);
+        }
     }
 }
