@@ -10,6 +10,7 @@ namespace WorkingWithText
     {
         static void Main(string[] args)
         {
+            StringUtility.Exercise5();
         }
     }
 }

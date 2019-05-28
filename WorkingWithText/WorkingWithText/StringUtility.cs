@@ -1,4 +1,9 @@
-﻿namespace WorkingWithText
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace WorkingWithText
 {
     public class StringUtility
     {
@@ -9,6 +14,26 @@
         /// </summary>
         public static void Exercise1()
         {
+            Console.WriteLine("Enter a few numbers separated by a hyphen:");
+            var input = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(input))
+                return;
+            var numbers = new List<int>();
+            var isConsecutive = true;
+            foreach (var number in input.Split('-'))
+            {
+                numbers.Add(Convert.ToInt32(number));
+            }
+            numbers.Sort();
+            for (var i = 1; i < numbers.Count; i++)
+            {
+                if (numbers[i] != numbers[i - 1] + 1)
+                {
+                    isConsecutive = false;
+                    break;
+                }
+            }
+            Console.WriteLine(isConsecutive ? "Consecutive" : "Not Consecutive");
         }
 
         /// <summary>
@@ -18,6 +43,33 @@
         /// </summary>
         public static void Exercise2()
         {
+            Console.WriteLine("Enter a few numbers separated by a hyphen:");
+            var input = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(input))
+                return;
+            var numbers = new List<int>();
+            var unique = new List<int>();
+            var isDuplicate = false;
+            foreach (var number in input.Split('-'))
+            {
+                numbers.Add(Convert.ToInt32(number));
+            }
+
+            foreach (var number in numbers)
+            {
+                if (!unique.Contains(number))
+                {
+                    unique.Add(number);
+                }
+                else
+                {
+                    isDuplicate = true;
+                }
+            }
+            if (isDuplicate)
+            {
+                Console.WriteLine("Duplicate");
+            }
         }
 
         /// <summary>
@@ -27,6 +79,36 @@
         /// </summary>
         public static void Exercise3()
         {
+            Console.WriteLine("Enter a time value in the 24-hour time format (e.g. 19:00):");
+            var input = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(input))
+            {
+                Console.WriteLine("Invalid Time");
+                return;
+            }
+            var time = input.Split(':');
+            if (time.Length != 2)
+            {
+                Console.WriteLine("Invalid Time");
+                return;
+            }
+            try
+            {
+                var hour = Convert.ToInt32(time[0]);
+                var minute = Convert.ToInt32(time[1]);
+                if (hour >= 0 && hour < 24 && minute >= 0 && minute < 60)
+                {
+                    Console.WriteLine("OK");
+                }
+                else
+                {
+                    Console.WriteLine("Invalid Time");
+                }
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("Invalid Time");
+            }
         }
 
         /// <summary>
@@ -37,6 +119,17 @@
         /// </summary>
         public static void Exercise4()
         {
+            Console.WriteLine("Enter a few words separated by a space: ");
+            var input = Console.ReadLine();
+            if (input == null)
+                return;
+            var stringBuilder = new StringBuilder();
+            var words = input.Split(' ');
+            foreach (var word in words)
+            {
+                stringBuilder.Append(word.First().ToString().ToUpper() + word.Substring(1).ToLower());
+            }
+            Console.WriteLine(stringBuilder);
         }
 
         /// <summary>
@@ -45,6 +138,18 @@
         /// </summary>
         public static void Exercise5()
         {
+            Console.WriteLine("Enter an English word");
+            var input = Console.ReadLine();
+            if (string.IsNullOrWhiteSpace(input))
+                return;
+            var vowels = new List<char> {'a', 'e', 'o', 'u', 'i'};
+            var count = 0;
+            foreach (var chr in input)
+            {
+                if (vowels.Contains(chr))
+                    count++;
+            }
+            Console.WriteLine("Total vowel: " + count);
         }
     }
 }
