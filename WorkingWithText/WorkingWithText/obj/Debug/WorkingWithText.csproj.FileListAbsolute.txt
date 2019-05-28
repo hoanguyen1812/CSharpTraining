@@ -1,0 +1,1 @@
+D:\Learning\C#\WorkingWithText\WorkingWithText\bin\Debug\WorkingWithText.exe.config

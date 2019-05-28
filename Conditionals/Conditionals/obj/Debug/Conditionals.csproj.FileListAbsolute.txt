@@ -1,0 +1,6 @@
+D:\Learning\C#\Conditionals\Conditionals\bin\Debug\Conditionals.exe.config
+D:\Learning\C#\Conditionals\Conditionals\bin\Debug\Conditionals.exe
+D:\Learning\C#\Conditionals\Conditionals\bin\Debug\Conditionals.pdb
+D:\Learning\C#\Conditionals\Conditionals\obj\Debug\Conditionals.csprojResolveAssemblyReference.cache
+D:\Learning\C#\Conditionals\Conditionals\obj\Debug\Conditionals.exe
+D:\Learning\C#\Conditionals\Conditionals\obj\Debug\Conditionals.pdb

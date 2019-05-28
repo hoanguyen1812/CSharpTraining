@@ -1,0 +1,6 @@
+D:\Learning\C#\ArrrayAndLists\ArrrayAndLists\bin\Debug\ArrrayAndLists.exe.config
+D:\Learning\C#\ArrrayAndLists\ArrrayAndLists\bin\Debug\ArrrayAndLists.exe
+D:\Learning\C#\ArrrayAndLists\ArrrayAndLists\bin\Debug\ArrrayAndLists.pdb
+D:\Learning\C#\ArrrayAndLists\ArrrayAndLists\obj\Debug\ArrrayAndLists.csprojResolveAssemblyReference.cache
+D:\Learning\C#\ArrrayAndLists\ArrrayAndLists\obj\Debug\ArrrayAndLists.exe
+D:\Learning\C#\ArrrayAndLists\ArrrayAndLists\obj\Debug\ArrrayAndLists.pdb
